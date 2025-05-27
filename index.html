@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Green Scholars Academy Q&A Form (GSA Form)</title>
   <style>
     :root {
@@ -21,23 +21,23 @@
       font-family: var(--font-family);
       background-color: var(--secondary-color);
       color: var(--text-color);
-      line-height: 1.6;
     }
     header {
       background-color: var(--primary-color);
       color: white;
-      padding: 1.5rem;
       text-align: center;
+      padding: 1rem;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
-    header h1 {
-      font-size: 2rem;
+    header img {
+      max-height: 80px;
+      margin-bottom: 0.5rem;
     }
     nav {
+      background-color: var(--accent-color);
       display: flex;
       justify-content: center;
       gap: 2rem;
-      background-color: var(--accent-color);
       padding: 0.8rem 0;
     }
     nav a {
@@ -45,6 +45,7 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1rem;
+      cursor: pointer;
     }
     section {
       max-width: 900px;
@@ -56,7 +57,7 @@
     }
     iframe {
       width: 100%;
-      height: 700px;
+      height: 1200px;
       border: none;
     }
     .illustration {
@@ -85,33 +86,39 @@
   </script>
 </head>
 <body>
-<header>
-  <img src="https://drive.google.com/uc?export=view&id=1F6wgkaOD-opku98avXeBQyuK2PbVeXRC" alt="GSA Logo" style="max-height: 80px; margin-bottom: 1rem;" />
-  <h1>Green Scholars Academy Q&A Form</h1>
-  <p>Helping students get academic support quickly and effectively</p>
-</header>
 
+  <!-- Header with logo -->
+  <header>
+    <img src="https://drive.google.com/uc?export=view&id=1F6wgkaOD-opku98avXeBQyuK2PbVeXRC" alt="GSA Logo" />
+    <h1>Green Scholars Academy Q&A Form</h1>
+    <p>Helping students get academic support quickly and effectively</p>
+  </header>
+
+  <!-- Navigation -->
   <nav>
-    <a href="#" onclick="switchPage('formPage')">Ask a Question</a>
-    <a href="#" onclick="switchPage('signupPage')">Tutor Sign Up</a>
+    <a onclick="switchPage('formPage')">Ask a Question</a>
+    <a onclick="switchPage('signupPage')">Tutor Sign Up</a>
   </nav>
 
+  <!-- Ask a Question Page -->
   <section id="formPage">
     <img src="https://cdn-icons-png.flaticon.com/512/4727/4727424.png" alt="Student Illustration" class="illustration" />
     <h2>Submit Your Academic Question</h2>
-    <p>Fill out this form to get help from a subject-specific tutor at Green Scholars Academy. Include clear information and attach any files that help explain your question.</p>
+    <p>Please complete the form below to submit your academic question. Be sure to select the correct subject and upload any relevant files. Our tutors will respond to you shortly.</p>
     <br />
-    <iframe src="https://forms.gle/tf2kEG2jJbkDDFjt8" allowfullscreen></iframe>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf40R2VHJ1Nkup1DsJDwIFAGsG-6utN_ZLQjz3y7l5Gx9sqmA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </section>
 
+  <!-- Tutor Sign Up Page -->
   <section id="signupPage" style="display: none;">
     <img src="https://cdn-icons-png.flaticon.com/512/2784/2784445.png" alt="Tutor Illustration" class="illustration" />
     <h2>Become a Tutor</h2>
-    <p>Passionate about helping others? Fill out this form to become a GSA tutor. Tutors will be matched based on subject expertise and notified when students ask questions.</p>
+    <p>If you're interested in helping students succeed, fill out the form below to sign up as a tutor for Green Scholars Academy. We’ll contact you with next steps.</p>
     <br />
-    <iframe src="https://forms.gle/VjJp1fiRsPhh1vcr7" allowfullscreen></iframe>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeO6GTlxQcxh_4X_AzQ9dd4Itnh0m2fgr3jvvl5ss5tR_QQ5Q/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </section>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 Green Scholars Academy | Empowering the Future
   </footer>
