@@ -4,126 +4,116 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Green Scholars Academy Q&A Form (GSA Form)</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --main-bg: #f6faf7;
-      --accent-color: #047857;
-      --text-dark: #111827;
-      --text-muted: #6b7280;
-      --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      --primary-color: #1a5e2b;
+      --secondary-color: #e6f4ea;
+      --accent-color: #5cb85c;
+      --text-color: #333;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
     }
-
     body {
-      background-color: var(--main-bg);
-      color: var(--text-dark);
+      font-family: var(--font-family);
+      background-color: var(--secondary-color);
+      color: var(--text-color);
       line-height: 1.6;
     }
-
     header {
-      background-color: var(--accent-color);
+      background-color: var(--primary-color);
       color: white;
-      padding: 1.2rem 2rem;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    nav {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      background-color: var(--accent-color);
+      padding: 0.8rem 0;
     }
-
-    header img {
-      height: 50px;
-      border-radius: 8px;
-    }
-
     nav a {
       color: white;
-      margin-left: 1.5rem;
       text-decoration: none;
-      font-weight: 600;
-      transition: opacity 0.3s;
+      font-weight: bold;
+      font-size: 1.1rem;
     }
-
-    nav a:hover {
-      opacity: 0.8;
-    }
-
-    .container {
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      background-color: white;
       padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-
-    .section {
-      margin-bottom: 4rem;
-    }
-
-    h2 {
-      margin-bottom: 1rem;
-      color: var(--accent-color);
-    }
-
-    .instructions {
-      background-color: #def7ec;
-      padding: 1rem;
-      border-left: 4px solid var(--accent-color);
-      border-radius: 6px;
-      margin-bottom: 1.5rem;
-    }
-
     iframe {
       width: 100%;
-      height: 800px;
+      height: 700px;
       border: none;
-      border-radius: 10px;
-      box-shadow: var(--box-shadow);
     }
-
+    .illustration {
+      width: 100%;
+      max-height: 250px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
     footer {
       text-align: center;
-      padding: 1.5rem;
-      background-color: #e6f4ef;
-      color: var(--text-muted);
-      font-size: 0.9rem;
+      padding: 1rem;
+      background-color: var(--primary-color);
+      color: white;
+      margin-top: 2rem;
     }
   </style>
+  <script>
+    function switchPage(pageId) {
+      document.getElementById('formPage').style.display = 'none';
+      document.getElementById('signupPage').style.display = 'none';
+      document.getElementById(pageId).style.display = 'block';
+    }
+    window.onload = () => {
+      switchPage('formPage');
+    };
+  </script>
 </head>
 <body>
   <header>
-    <div style="display: flex; align-items: center;">
-      <img src="YOUR_LOGO_URL_HERE" alt="GSA Logo">
-      <h1 style="margin-left: 1rem; font-size: 1.5rem;">Green Scholars Academy - Q&A (GSA Form)</h1>
-    </div>
-    <nav>
-      <a href="#question-form">Ask a Question</a>
-      <a href="#tutor-signup">Become a Tutor</a>
-    </nav>
+    <img src="YOUR_LOGO_URL_HERE" alt="GSA Logo" style="max-height: 80px; margin-bottom: 1rem;" />
+    <h1>Green Scholars Academy Q&A Form</h1>
+    <p>Helping students get academic support quickly and effectively</p>
   </header>
 
-  <div class="container">
-    <section id="question-form" class="section">
-      <h2>Ask Your Question</h2>
-      <div class="instructions">
-        <p>Please use the form below to ask your academic question. Be sure to select the correct subject and upload any relevant documents. A subject tutor will respond once your question is reviewed.</p>
-      </div>
-      <iframe src="https://forms.gle/L7LXYNxa9EaveYVn9">Loading…</iframe>
-    </section>
+  <nav>
+    <a href="#" onclick="switchPage('formPage')">Ask a Question</a>
+    <a href="#" onclick="switchPage('signupPage')">Tutor Sign Up</a>
+  </nav>
 
-    <section id="tutor-signup" class="section">
-      <h2>Become a Tutor</h2>
-      <p>If you're a subject matter expert and want to help students succeed, fill out the form below to join Green Scholars Academy as a tutor.</p>
-      <iframe src="https://forms.gle/XqC9aXuXJLPHLmD57">Loading…</iframe>
-    </section>
-  </div>
+  <section id="formPage">
+    <img src="https://cdn-icons-png.flaticon.com/512/4727/4727424.png" alt="Student Illustration" class="illustration" />
+    <h2>Submit Your Academic Question</h2>
+    <p>Fill out this form to get help from a subject-specific tutor at Green Scholars Academy. Include clear information and attach any files that help explain your question.</p>
+    <br />
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf40R2VHJ1Nkup1DsJDwIFAGsG-6utN_ZLQjz3y7l5Gx9sqmA/viewform?usp=dialog" allowfullscreen></iframe>
+  </section>
+
+  <section id="signupPage" style="display: none;">
+    <img src="https://cdn-icons-png.flaticon.com/512/2784/2784445.png" alt="Tutor Illustration" class="illustration" />
+    <h2>Become a Tutor</h2>
+    <p>Passionate about helping others? Fill out this form to become a GSA tutor. Tutors will be matched based on subject expertise and notified when students ask questions.</p>
+    <br />
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeO6GTlxQcxh_4X_AzQ9dd4Itnh0m2fgr3jvvl5ss5tR_QQ5Q/viewform?usp=dialog" allowfullscreen></iframe>
+  </section>
 
   <footer>
-    &copy; 2025 Green Scholars Academy. All rights reserved.
+    &copy; 2025 Green Scholars Academy | Empowering the Future
   </footer>
 </body>
 </html>
